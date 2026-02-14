@@ -118,27 +118,20 @@ function DesktopView() {
           </div>
         </div>
 
-        {/* Node 2: QCM - Done */}
+        {/* Node 2: Quiz - Locked */}
         <div
           className="absolute z-[2] flex flex-col items-center justify-center cursor-default"
           style={{ left: "35%", top: "35%", transform: "translate(-50%, -50%)" }}
         >
           <div
-            className="relative w-[70px] h-[70px] rounded-full flex items-center justify-center text-[28px] transition-all duration-300 hover:scale-110"
+            className="w-[70px] h-[70px] rounded-full flex items-center justify-center text-[28px] text-white transition-all duration-300 hover:scale-110"
             style={{
-              background: "#CF9FFF",
-              border: "3px solid #fff",
-              color: "#000435",
-              boxShadow: "0 0 30px rgba(207, 159, 255, 0.6)",
+              background: "#000435",
+              border: "3px solid rgba(255, 255, 255, 0.2)",
+              boxShadow: "0 0 15px rgba(255, 255, 255, 0.1)",
             }}
           >
-            <Check size={28} strokeWidth={2.5} />
-            <div
-              className="absolute -top-[15px] -right-[15px] bg-white text-[10px] font-bold px-2 py-1 rounded-[10px] shadow-md animate-bounce"
-              style={{ color: "#000435" }}
-            >
-              VALIDÉ
-            </div>
+            <Video size={28} style={{ color: "rgba(255, 255, 255, 0.3)" }} />
           </div>
           <div className="absolute top-[85px] w-[220px] text-center">
             <h3
@@ -156,27 +149,20 @@ function DesktopView() {
           </div>
         </div>
 
-        {/* Node 3: Devoir - Done */}
+        {/* Node 3: Assignment - Locked */}
         <div
           className="absolute z-[2] flex flex-col items-center justify-center cursor-default"
           style={{ left: "55%", top: "65%", transform: "translate(-50%, -50%)" }}
         >
           <div
-            className="relative w-[70px] h-[70px] rounded-full flex items-center justify-center text-[28px] transition-all duration-300 hover:scale-110"
+            className="w-[70px] h-[70px] rounded-full flex items-center justify-center text-[28px] text-white transition-all duration-300 hover:scale-110"
             style={{
-              background: "#CF9FFF",
-              border: "3px solid #fff",
-              color: "#000435",
-              boxShadow: "0 0 30px rgba(207, 159, 255, 0.6)",
+              background: "#000435",
+              border: "3px solid rgba(255, 255, 255, 0.2)",
+              boxShadow: "0 0 15px rgba(255, 255, 255, 0.1)",
             }}
           >
-            <Check size={28} strokeWidth={2.5} />
-            <div
-              className="absolute -top-[15px] -right-[15px] bg-white text-[10px] font-bold px-2 py-1 rounded-[10px] shadow-md animate-bounce"
-              style={{ color: "#000435" }}
-            >
-              VALIDÉ
-            </div>
+            <LaptopMinimal size={28} style={{ color: "rgba(255, 255, 255, 0.3)" }} />
           </div>
           <div className="absolute top-[85px] w-[220px] text-center">
             <h3
@@ -194,20 +180,20 @@ function DesktopView() {
           </div>
         </div>
 
-        {/* Node 4: Stage - Current */}
+        {/* Node 4: Internship - Locked */}
         <div
           className="absolute z-[2] flex flex-col items-center justify-center cursor-default"
           style={{ left: "75%", top: "35%", transform: "translate(-50%, -50%)" }}
         >
           <div
-            className="w-[70px] h-[70px] rounded-full flex items-center justify-center text-[28px] text-white transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(207,159,255,0.5)]"
+            className="w-[70px] h-[70px] rounded-full flex items-center justify-center text-[28px] text-white transition-all duration-300 hover:scale-110"
             style={{
               background: "#000435",
-              border: "3px solid #CF9FFF",
-              boxShadow: "0 0 20px rgba(207, 159, 255, 0.2), inset 0 0 10px rgba(207, 159, 255, 0.1)",
+              border: "3px solid rgba(255, 255, 255, 0.2)",
+              boxShadow: "0 0 15px rgba(255, 255, 255, 0.1)",
             }}
           >
-            <Building size={28} />
+            <Building size={28} style={{ color: "rgba(255, 255, 255, 0.3)" }} />
           </div>
           <div className="absolute top-[85px] w-[220px] text-center">
             <h3
@@ -278,22 +264,20 @@ function MobileView() {
     {
       title: "QCM en Ligne",
       description: "Testez vos connaissances sur la plateforme.",
-      icon: Check,
-      status: "done",
-      badge: "VALIDÉ"
+      icon: Video,
+      status: "locked"
     },
     {
       title: "Validation du devoir",
       description: "Soumettez votre pratique pour analyse.",
-      icon: Check,
-      status: "done",
-      badge: "VALIDÉ"
+      icon: LaptopMinimal,
+      status: "locked"
     },
     {
       title: "Stage Pratique",
       description: "Immersion en institut partenaire.",
       icon: Building,
-      status: "current"
+      status: "locked"
     },
     {
       title: "CERTIFICATION",
@@ -354,7 +338,7 @@ function MobileView() {
                                "3px solid rgba(255, 255, 255, 0.2)",
                       boxShadow: node.status === "done" ? "0 0 20px rgba(207, 159, 255, 0.6)" :
                                    node.status === "current" ? "0 0 15px rgba(207, 159, 255, 0.3)" :
-                                   "none",
+                                   "0 0 15px rgba(255, 255, 255, 0.1)",
                     }}
                   >
                     <Icon
@@ -363,6 +347,7 @@ function MobileView() {
                         color: node.status === "done" ? "#000435" :
                                node.status === "final" ? "#CF9FFF" :
                                node.status === "current" ? "#fff" :
+                               node.status === "locked" ? "rgba(255, 255, 255, 0.3)" :
                                "rgba(255, 255, 255, 0.3)"
                       }}
                     />
