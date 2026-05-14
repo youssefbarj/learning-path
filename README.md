@@ -1,18 +1,22 @@
-# Parcours d'Apprentissage — Slide Final Partagé (FR)
+# SOIN DU VISAGE — Slide 24
 
-**Course:** Brow lift & Lamination · Soin de visage · Basic Facial · Massage Berbere · Kobido · Soin HydraFacial · Combinaison LASH+BROW · LASH LIFTING · Massage Relaxant · Reconstruction du Sourcil · Maquillage Correctif  
-**Slide:** Final slide (shared)  
-**Live URL:** https://learning-path.edtechiecorp.com  
-**Stack:** Next.js · Tailwind CSS · TypeScript · GitHub Pages  
+**Course:** SOIN DU VISAGE
+**Slide:** 24
+**Live URL:** https://learning-path-ruby.edtechiecorp.com
+**Stack:** Next.js · Tailwind CSS · TypeScript · GitHub Pages
 
-## What this slide does
-
-Shared course completion slide displayed at the end of multiple French-language courses. Shows the learner their completed learning path and highlights the next courses they can explore. This congratulatory slide reinforces the learner's progress and encourages continued engagement with the EdTechie curriculum by showing what other certifications are available.
+> Also used as the final learning path slide in multiple other courses.
 
 ## Screenshot
 
-![learning-path](./screenshot.png)
+![learning-path](https://github.com/youssefbarj/learning-path/raw/main/screenshot.png)
+
+## What this slide does
+
+This is an interactive slide embedded as an iframe inside Coassemble. See the screenshot above for a visual preview of the content.
 
 ## Usage
 
-This slide is embedded as an iframe inside Coassemble at the live URL above. DNS is managed via Cloudflare (`edtechiecorp.com`). To update the slide, push to the `main` branch — GitHub Actions will rebuild and redeploy automatically.
+This slide is served via GitHub Pages at the live URL above. DNS is managed via Cloudflare (`edtechiecorp.com`). To update the slide, push to the `main` branch — GitHub Actions will rebuild and redeploy automatically.
+
+> **For E-Lumy's tech team:** After migrating this repo to your own GitHub account, re-enable GitHub Pages in Settings → Pages → Source: GitHub Actions. Then update the embed URL in Coassemble to your new deployment URL.
