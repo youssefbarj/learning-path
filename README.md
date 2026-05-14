@@ -9,7 +9,7 @@
 
 ## Screenshot
 
-![learning-path](https://github.com/youssefbarj/learning-path/raw/main/screenshot.png)
+![learning-path](https://raw.githubusercontent.com/youssefbarj/learning-path/main/screenshot.png)
 
 ## What this slide does
 
